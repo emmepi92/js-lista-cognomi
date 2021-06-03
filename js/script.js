@@ -1,11 +1,12 @@
 var cognomi = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];  
-var userSurname = prompt("Inserisca il suo Cognome");   
+var userSurname = prompt("Inserisca il suo Cognome");  
+userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1); 
 
 cognomi.push(userSurname);  
 cognomi.sort(); 
 
 var outputList = document.getElementsByClassName("result-list")[0]; 
-var result = '';    
+var result = '';        
 
 for (i=0; i < cognomi.length; i++) {    
     result += '<li>' + cognomi[i] + '</li>';    
